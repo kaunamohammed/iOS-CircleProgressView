@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,48 +18,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOz-HB-1dd">
-                                <rect key="frame" x="16" y="559" width="120" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="CmE-2p-of6"/>
-                                    <constraint firstAttribute="width" constant="120" id="VlS-uY-yPs"/>
-                                </constraints>
+                                <rect key="frame" x="10" y="556" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-Fu-b6r">
-                                <rect key="frame" x="142" y="555" width="387" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="weE-bt-Wfr"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="E3a-s5-1iV"/>
-                                </connections>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-ZN-5s6">
-                                <rect key="frame" x="535" y="554" width="51" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="tvr-ip-sz4"/>
-                                    <constraint firstAttribute="width" constant="49" id="yQ3-h0-BRO"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="switchDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="hCd-fh-6dT"/>
-                                </connections>
-                            </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y83-4d-8fY" customClass="CircleProgressView" customModule="CircleProgressView">
-                                <rect key="frame" x="175" y="150" width="250" height="250"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Hm8-Dh-irI"/>
-                                    <constraint firstAttribute="height" constant="250" id="nAD-9I-B13"/>
+                                    <constraint firstAttribute="width" constant="250" id="kes-ok-8z5"/>
+                                    <constraint firstAttribute="height" constant="250" id="yDD-zb-RG5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.65000000000000002"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
@@ -65,33 +46,48 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="centerImage" value="lion"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-ZN-5s6">
+                                <rect key="frame" x="320" y="550.5" width="51" height="30.5"/>
+                                <connections>
+                                    <action selector="switchDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="CsU-Io-rIT"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="45y-7t-IUW">
+                                <rect key="frame" x="111" y="550.5" width="201" height="31.5"/>
+                                <connections>
+                                    <action selector="sliderDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZKx-X0-yvO"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TOf-ZN-5s6" secondAttribute="bottom" constant="15" id="DQV-mP-I7n"/>
-                            <constraint firstAttribute="centerX" secondItem="Y83-4d-8fY" secondAttribute="centerX" id="Nrg-Hi-ic7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pOz-HB-1dd" secondAttribute="bottom" constant="20" id="P4n-7z-DDd"/>
-                            <constraint firstAttribute="centerY" secondItem="Y83-4d-8fY" secondAttribute="centerY" constant="25" id="WFK-zA-kab"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M0Q-Fu-b6r" secondAttribute="bottom" constant="15" id="bcW-P3-Yqq"/>
-                            <constraint firstItem="pOz-HB-1dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dth-W4-hfR"/>
-                            <constraint firstItem="TOf-ZN-5s6" firstAttribute="leading" secondItem="M0Q-Fu-b6r" secondAttribute="trailing" constant="8" id="f4o-gX-KW6"/>
-                            <constraint firstItem="TOf-ZN-5s6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gDb-iX-71e"/>
-                            <constraint firstItem="M0Q-Fu-b6r" firstAttribute="leading" secondItem="pOz-HB-1dd" secondAttribute="trailing" constant="8" id="onn-uo-0ry"/>
+                            <constraint firstItem="45y-7t-IUW" firstAttribute="centerY" secondItem="TOf-ZN-5s6" secondAttribute="centerY" id="0Lo-n1-otN"/>
+                            <constraint firstItem="45y-7t-IUW" firstAttribute="leading" secondItem="pOz-HB-1dd" secondAttribute="trailing" constant="30" id="6LF-J4-jaz"/>
+                            <constraint firstItem="45y-7t-IUW" firstAttribute="top" secondItem="Y83-4d-8fY" secondAttribute="bottom" constant="92" id="Gij-g7-aL8"/>
+                            <constraint firstItem="TOf-ZN-5s6" firstAttribute="leading" secondItem="45y-7t-IUW" secondAttribute="trailing" constant="10" id="PWH-eA-eDW"/>
+                            <constraint firstItem="pOz-HB-1dd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="SOH-79-wSh"/>
+                            <constraint firstItem="Y83-4d-8fY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WoF-tQ-9ko"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="45y-7t-IUW" secondAttribute="bottom" constant="86" id="XoI-3s-uSK"/>
+                            <constraint firstItem="Y83-4d-8fY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mDJ-av-cRM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TOf-ZN-5s6" secondAttribute="bottom" constant="86" id="oiO-CZ-n9E"/>
+                            <constraint firstAttribute="trailing" secondItem="TOf-ZN-5s6" secondAttribute="trailing" constant="6" id="pyu-a6-b8Y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pOz-HB-1dd" secondAttribute="bottom" constant="90" id="yYb-iY-SHY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="circleProgressView" destination="Y83-4d-8fY" id="tG2-LL-o5I"/>
                         <outlet property="clockwiseSwitch" destination="TOf-ZN-5s6" id="dC4-Oa-FWI"/>
                         <outlet property="progressLabel" destination="pOz-HB-1dd" id="o3d-gj-qny"/>
-                        <outlet property="progressSlider" destination="M0Q-Fu-b6r" id="JHa-9l-e2P"/>
+                        <outlet property="progressSlider" destination="45y-7t-IUW" id="cnG-0u-3nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="61.619190404797607"/>
         </scene>
     </scenes>
     <resources>
-        <image name="lion" width="312" height="230"/>
+        <image name="lion" width="468" height="345"/>
         <image name="progressImage" width="250" height="250"/>
     </resources>
 </document>
